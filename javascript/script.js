@@ -1,6 +1,6 @@
 var map = L.map('map',{
-  center: [5,28],
-  zoom: 3,
+  center: [6.174469,-75.584556],
+  zoom: 15,
   minZoom: 2,
   maxZoom: 18
 });
@@ -13,3 +13,4 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     id: 'mandym.0417cffe',
     accessToken: 'pk.eyJ1IjoibWFuZHltIiwiYSI6InJ0N0t5UzQifQ.QuC-ffTnnah5oonnfh-hlQ'
 }).addTo(map);
+
