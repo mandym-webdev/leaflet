@@ -14,3 +14,18 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoibWFuZHltIiwiYSI6InJ0N0t5UzQifQ.QuC-ffTnnah5oonnfh-hlQ'
 }).addTo(map);
 
+// adding data points
+
+var teardrop = new 
+L.Icon({
+  iconUrl: "images/marker-icon.png"
+});
+
+function baseLayer (feature,layer) {
+  layer.bindPopup("hi, I'm an info window");
+  layer.setIcon(teardrop);
+};
+
+L.geoJson(seeds,{
+  onEachFeature: baseLayer
+}).addTo(map);
