@@ -22,7 +22,7 @@ L.Icon({
 });
 
 function baseLayer (feature,layer) {
-  layer.bindPopup("hi, I'm an info window");
+  layer.bindPopup("<h1>" + feature.properties.Title + "</h1>");
   layer.setIcon(teardrop);
 };
 
