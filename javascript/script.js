@@ -1,0 +1,15 @@
+var map = L.map('map',{
+  center: [5,28],
+  zoom: 3,
+  minZoom: 2,
+  maxZoom: 18
+});
+
+// L.tileLayer('http://{s}.tiles.mapbox.com/v3/mandym.0417cffe/{z}/{x}/{y}.png',{attribution: "Mapbox"}).addTo(map);
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mandym.0417cffe',
+    accessToken: 'pk.eyJ1IjoibWFuZHltIiwiYSI6InJ0N0t5UzQifQ.QuC-ffTnnah5oonnfh-hlQ'
+}).addTo(map);
